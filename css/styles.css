@@ -1,0 +1,167 @@
+/*
+   statusbar-overlay sets the background color for the overlay. Black text is the default when the statusbar plugin is not added. When the
+   statusbar plugin is added, it also adds default setting to make the content white via:
+
+       <preference name="StatusBarStyle" value="lightcontent"/>
+
+   Setting the background color to black will allow the default light content (white text/icons) to show on it. The statusbar plugin is included
+   in the config.xml file and will be added by the CLI when you build locally.
+
+   See https://github.com/apache/cordova-plugin-statusbar
+*/
+
+body{
+    background: #eceff1 none repeat scroll 0 0;
+    color: #37474f;
+    font-family: "brandon-grotesque","Brandon Grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.articleTitleH1{
+    font-family: "brandon-grotesque","Brandon Grotesque","Helvetica Neue",Helvetica,Arial,sans-serif;
+    margin: 0px;
+}
+
+.statusbar-overlay {
+    background: #000000;
+}
+
+.update-box{
+	margin: 5px;
+	display: none;
+}
+
+.fadeOut{
+ -webkit-animation: fadeout 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadeout 3s; /* Firefox < 16 */
+     -ms-animation: fadeout 3s; /* Internet Explorer */
+      -o-animation: fadeout 3s; /* Opera < 12.1 */
+         animation: fadeout 3s;
+}
+
+.update-box2 {
+    margin: 5px;
+
+ -webkit-animation: fadein 3s; /* Safari, Chrome and Opera > 12.1 */
+    -moz-animation: fadein 3s; /* Firefox < 16 */
+     -ms-animation: fadein 3s; /* Internet Explorer */
+      -o-animation: fadein 3s; /* Opera < 12.1 */
+         animation: fadein 3s;
+}
+
+@keyframes fadein {
+    from { 
+	opacity: 0;
+	-webkit-transform: translate3d(100%, 0, 0);
+	transform: translate3d(100%, 0, 0);
+    }
+    to{
+	opacity: 1;
+	-webkit-transform: none;
+    	transform: none;
+    }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; margin-top:500px;}
+    to   { opacity: 1; margin-top:5px; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; margin-top:500px;}
+    to   { opacity: 1; margin-top:5px; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; margin-top:500px;}
+    to   { opacity: 1; margin-top:5px; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+@keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadeout {
+    from { opacity: 1; }
+    to   { opacity: 0;  }
+}
+
+article{
+    border-radius: 25px;
+    padding: 5px;
+    transition-delay: 0s, 0s;
+    transition-duration: 0.3s, 0.3s;
+    transition-timing-function: cubic-bezier(0.2, 1, 0.3, 1);
+    color: black;
+    cursor: pointer;
+    margin: 5px;
+    background: #eceff1 none repeat scroll 0 0;
+    border: 1px solid #37474f;
+    color: #37474f;
+    border-radius: 10px;
+}
+
+.articleTitleH1{	
+    text-align: center;
+    padding: 10px;
+}
+
+.sectionDate{
+	font-size: 15px;
+	display: none;
+	text-align: center;
+}
+
+.sectionContent{
+	word-wrap:break-word;
+	display: none;
+	padding-top:10px;
+}
+.content-block{
+	word-wrap:break-word;	
+}
+
+.logo {
+    background: #fff url("https://images.duckduckgo.com/iu/?u=http%3A%2F%2Fmedia.riffsy.com%2Fimages%2Fa53b2004b811eb64e033c85dbd283e14%2Fraw&f=1") no-repeat scroll center center;
+    height: 100%;
+    padding: 0 30px;
+    position: absolute;
+    text-indent: -9999px;
+    width: 100%;
+    z-index: 100;
+}
+
+.container {
+    box-shadow: 0 -5px 0 0 #000 inset, 0 5px 0 0 #000 inset;
+    width: 100%;
+}
+
+
